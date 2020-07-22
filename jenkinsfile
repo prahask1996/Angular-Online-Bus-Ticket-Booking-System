@@ -7,7 +7,7 @@ node {
                       sh "npm install"
          }
          stage('Build'){
-                      sh "npm run build:ssr"
+                      sh "ng build:ssr"
          }
          stage('Deploy'){
                       sh "pm2 restart all"
