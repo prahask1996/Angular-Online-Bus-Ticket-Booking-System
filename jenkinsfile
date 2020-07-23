@@ -8,7 +8,7 @@ node {
          }
          stage('Build'){
                      sh "ng build --no-aot --no-build-optimizer --base-href ./"
-                     sh "cp -R /home/dist/test/   /var/lib/jenkins/workspace/angular/"
+                     sh "cp -R /dist/Angular-Online-Bus-Ticket-Booking-System/dist/*   /var/lib/jenkins/workspace/angular/"
          }
          stage('Deploy'){
                       sh "pm2 restart all"
