@@ -9,9 +9,9 @@ node {
          stage('Build'){
                  //    sh "ng build --no-aot --no-build-optimizer --base-href ./"
                  //    sh "cp -R /dist/Angular-Online-Bus-Ticket-Booking-System/dist/   /var/lib/jenkins/workspace/angular/"
-                       sh "ng build -prod"     
+                       sh "ng build --prod"     
          }
-         stage('Deploy'){
-                       sh "ng serve"
-         }
+        //  stage('Deploy'){
+        //                sh "ng serve"
+        //  }
      }
