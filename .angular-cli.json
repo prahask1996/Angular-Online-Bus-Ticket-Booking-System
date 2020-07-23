@@ -1,12 +1,12 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "project": {
-    "name": "bus-bd"
+    "name": "Angular-Online-Bus-Ticket-Booking-System"
   },
   "apps": [
     {
       "root": "src",
-      "outDir": "dist",
+      "outDir": "dist/Angular-Online-Bus-Ticket-Booking-System",
       "assets": [
         "assets",
         "favicon.ico"
