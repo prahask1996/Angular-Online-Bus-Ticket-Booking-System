@@ -31,7 +31,7 @@ node(){
     stage('Stash changes') {
         stash allowEmpty: true, includes: 'bundle.tar.gz', name: 'buildArtifacts'
     }
-}
+
 stage('Approval') {
             // no agent, so executors are not used up when waiting for approvals
             agent 'awsnode'
@@ -42,7 +42,7 @@ stage('Approval') {
                 }
             }
         }
-
+}
 node('awsnode') {
     echo 'Unstash'
     unstash 'buildArtifacts'
