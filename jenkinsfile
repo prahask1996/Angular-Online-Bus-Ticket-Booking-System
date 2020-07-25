@@ -17,10 +17,6 @@ node(){
         }
         
     }
-
-    stage('Package Build') {
-        sh "tar -zcvf bundle.tar.gz dist/Angular-Online-Bus-Ticket-Booking-System/"
-    }
      stage('Approval') {
             // no agent, so executors are not used up when waiting for approvals
         agent none
@@ -32,6 +28,11 @@ node(){
             }
         }
 }
+
+    stage('Package Build') {
+        sh "tar -zcvf bundle.tar.gz dist/Angular-Online-Bus-Ticket-Booking-System/"
+    }
+    
 
     stage('Artifacts Creation') {
         fingerprint 'bundle.tar.gz'
