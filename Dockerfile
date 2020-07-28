@@ -10,4 +10,4 @@ RUN npm install
 RUN npm build --prod
 
 FROM nginx:alpine
-COPY dist/Angular-Online-Bus-Ticket-Booking-System /usr/share/ngnix/html
+COPY /dist/Angular-Online-Bus-Ticket-Booking-System /usr/share/ngnix/html
