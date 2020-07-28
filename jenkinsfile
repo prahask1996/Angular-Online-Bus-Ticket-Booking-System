@@ -2,21 +2,14 @@ node(){
     stage('Cloning Git') {
         checkout scm
     }
-        
-    stage('Install dependencies') {
-       
-            sh 'npm install'
-            echo "Modules installed"
-
-        
-    }
-    stage('Build') {
-    
-            sh 'ng build --prod'
-            echo "Build completed"
-    
-        
-    }
+     stage('Install node modules'){
+                      powershell 'npm install'
+                      echo "modules installed"
+         }
+         stage('Build'){
+                     powershell 'npm run ng -- build --prod'
+                     echo "build successful"
+         }
 
     stage('Package Build') {
         sh "tar -zcvf bundle.tar.gz dist/Angular-Online-Bus-Ticket-Booking-System/"
